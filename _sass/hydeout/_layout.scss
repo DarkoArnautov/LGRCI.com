@@ -24,20 +24,17 @@
 
 body {
   color: $sidebar-text-color;
+  
+}
+
+#sidebar {
+  padding: $section-spacing;
+  min-height: 100vh;
   background-color: $sidebar-bg-color;
   background-image: linear-gradient(
     to bottom,
     lighten($sidebar-bg-color, 7%),
     darken($sidebar-bg-color, 7%));
-  display: flex;
-  flex-direction: column;
-  min-width: 100vw;
-  min-height: 100vh;
-}
-
-#sidebar {
-  flex: 0 0 auto;
-  padding: $section-spacing;
 
   .site-title {
     font-family: "Abril Fatface", serif;
@@ -50,23 +47,30 @@ body {
   }
 }
 
-// Container is flexbox as well -- we want content div to stretch and fill
-.container {
-  flex: 1 1 auto;
-  display: flex;
-  flex-direction: column;
-
-  > .content {
-    flex-grow: 1;
-    padding-bottom: $section-spacing * 2;
-  }
-}
 
 .content {
   background: $body-bg;
+  font-family: "DINNextLTPro-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: $body-color;
+  font-size: 16px;
   padding: $section-spacing;
+
+  a {
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #e85a52;
+  }
+
+  h3 {
+    font-size: 24px;
+    font-weight: 350;
+    line-height: 33px;
+    padding-bottom: 10px;
+  }
 }
+
 
 
 /* -----------------------------------------------------------
@@ -77,7 +81,7 @@ body {
 // Hide lead paragraph in sidebar
 #sidebar {
   header ~ *, header ~ nav, p.lead {
-    display: none;
+    display: block;
   }
 }
 
@@ -118,12 +122,6 @@ body {
     display: block;
   }
 
-  header {
-    ~ nav {
-      display: flex;
-    }
-  }
-
   // Slightly more bottom padding to compensate for heading not match 100% of
   // line-height on top
   > *:last-child {
@@ -138,14 +136,49 @@ body {
 
 @media (min-width: $large-breakpoint) {
   body {
-    flex-direction: row;
-    height: 100vh;
-    overflow-y: auto;
+    
     -webkit-overflow-scrolling: touch;
     > * {
-      max-height: 100vh; 
       overflow-y: auto; 
       -webkit-overflow-scrolling: touch;
+    }
+  }
+
+  .home {
+      background: url(../img/home-bg.jpg) right bottom no-repeat;
+      background-size: cover;
+    main {
+      width: 75%;
+      vertical-align: top;
+      margin-left: -5px;
+      display: inline-block;
+      
+      height: 100vh;
+      .content {
+        
+        color: #FFF !important;
+        line-height: 42px;
+        text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.75);
+        text-transform: uppercase;
+        text-align: center;
+        background: rgba(255,255,255, 0.001);
+
+        h1 {
+          font-size: 136px;
+          color: #FFF !important;
+          line-height: 100px;
+        }
+
+        h2 {
+          font-size: 60px;
+          color: #FFF !important;
+        }
+
+        h3 {
+          font-size: 42px;
+          color: #FFF !important;
+        }
+      }
     }
   }
 
@@ -153,6 +186,7 @@ body {
 
   #sidebar, .home #sidebar {
     width: $sidebar-width;
+    display: inline-block;
     text-align: left;
 
     > *:last-child {
@@ -170,22 +204,45 @@ body {
       display: block;
     }
 
-    header ~ nav {
-      display: flex;
+    header a {
+      border-bottom: 0px ;
     }
+
+    h1, p {
+      font-size: 13px;
+      color: #fff;
+      padding-top: 15px;
+    }
+
+    .sidebar-footer {
+      display: flex !important;
+
+      img {
+        display: inline-block;
+      }
+
+      h1 {
+        display: inline-block;
+        padding-top: 7px;
+        padding-left: 30px;
+        vertical-align: top;
+      }
+    }
+    
   }
 
   .index #sidebar { margin-bottom: 0; }
 
   // Make entire container background white to contrast against sidebar
   .container {
-    background: $body-bg;
+    width: 74.5%;
+    height: 100vh;
+    display: inline-block;
+    vertical-align: top;
     color: $body-color;
     padding: $section-spacing * 2
-             $section-spacing * 2
+             $section-spacing
              0;
-    height: 100vh;
-
     > header {
       color: $heading-color;
       margin: 0;
@@ -199,7 +256,6 @@ body {
     }
 
     > * {
-      max-width: 38rem;
       padding: 0;
     }
   }
@@ -212,17 +268,25 @@ body {
 
 #sidebar a {
   color: $sidebar-link-color;
+  display: block;
+  padding: 10px 0px;
+  border-bottom: 2px solid #FFF;
+  font-size: 13px;
+  line-height: 19px;
+  color: #FFF;
 
   svg {
     fill: $sidebar-icon-color;
   }
 
   &:hover, &:focus, &.active {
+    color: #e85a52;
     svg { fill: $sidebar-icon-color; }
   }
 
   &:hover, &:focus {
-    text-decoration: underline;
+    text-decoration: none;
+    color: #e85a52;
     &.icon {
       text-decoration: none;
     }
@@ -237,23 +301,16 @@ body {
   color: $sidebar-title-color;
   a { color: inherit; }
 }
-#sidebar nav {
-  display: flex;
-}
 
-#sidebar-nav-links {
-  flex-flow: column nowrap;
-}
 
 #sidebar-icon-links {
   max-width: 100%;
-  flex-flow: row wrap;
   justify-content: center;
   margin-top: 1rem;
 
   @media (min-width: $large-breakpoint) {
     margin-left: -0.25em;
-    justify-content: flex-start;
+
   }
 }
 
@@ -276,14 +333,6 @@ body {
   bottom of the sidebar in tablets and up.
 ----------------------------------------------------------- */
 
-@if $sidebar-sticky {
-  @media (min-width: $large-breakpoint) {
-    body {
-      align-items: flex-end;
-    }
-  }
-}
-
 
 /* -----------------------------------------------------------
   Reverse layout
@@ -297,5 +346,35 @@ body {
     .container {
       order: -1;
     }
+  }
+}
+
+/* footer */
+
+footer {
+  background: black;
+  margin-top: -10px;
+  padding: 20px;
+  display: flex;
+
+  p {
+    font-size: 13px;
+  }
+
+  .copyright {
+    width: 30%;
+  }
+
+  .address {
+    width: 20%;
+  }
+
+  .contact {
+    width: 20%;
+  }
+
+  .nav-menu {
+    width: 50%;
+    text-align: right;
   }
 }

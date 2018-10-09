@@ -1,14 +1,14 @@
 <div id="sidebar">
   <header>
-    <{% if page.layout == "index" %}h1{% else %}div{% endif %} class="site-title">
+  	<{% if page.layout == "index" %}h1{% else %}div{% endif %} class="site-title">
       <a href="{{ site.baseurl }}/">
         {% unless page.url == "/" %}
           <span class="back-arrow icon">{% include svg/back-arrow.svg %}</span>
         {% endunless %}
-        {{ site.title }}
+        <img src="./assets/img/lgrci_logo.png"/>   
       </a>
     </{% if page.layout == "index" %}h1{% else %}div{% endif %}>
-    <p class="lead">{{ site.description }}</p>
+    
   </header>
   {% include sidebar-nav-links.html %}
 
@@ -16,6 +16,10 @@
     <span class="site-version">Currently v{{ site.version }}</span>
   {% endif %}
 
-  {% include sidebar-icon-links.html %}
-  {% include copyright.html %}
+  	<h1>LGRC is Chicago's Premier Regional Center</h1>
+	<p>We work with Chicago's top developes to find the best investment opportunities for foreign investors who are seeking permanent residency in the United States.</p>
+	<div class="sidebar-footer">
+		<img src="./assets/img/us-dhs-logo.png">
+		<h1>USCIS Approved Regional Center</h1>
+	</div>
 </div>
