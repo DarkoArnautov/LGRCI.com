@@ -137,6 +137,47 @@ body {
   .contact-info {
     width: 40%;
   }
+
+  .button-list {
+
+    button {
+      border-radius: 0px;
+      border: 0px;
+      color: white;
+      font-size: 16px;
+      line-height: 38px;
+      color: #FFF;
+      text-transform: uppercase;
+      cursor: pointer;
+      padding: 0 10px;
+      margin: 0 10px;
+      width: 150px;
+    }
+  }
+
+  #developers {
+    background: #ee3224;
+  }
+
+  #developers:hover {
+    background: #b2251b;
+  }
+
+  #eb-5-visa {
+    background: #333;
+  }
+
+  #eb-5-visa:hover {
+    background: #262626;
+  }
+
+  #projects {
+    background: #4b81d4;
+  }
+
+  #projects:hover {
+    background: #38609f;
+  }
 }
 
 

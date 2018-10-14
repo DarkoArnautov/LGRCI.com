@@ -3,6 +3,7 @@ layout: page
 title: EB-5 Visa
 sidebar_link: true
 weight: 3
+permalink: /eb-5-visa
 ---
 
 ### The below information is meant as a basic summary of the EB-5 program for developers and attorneys.  For a more extensive accounting of the program please consult the website of the [United States Citizenship and Immigration Services](https://www.uscis.gov/working-united-states/permanent-workers/employment-based-immigration-fifth-preference-eb-5/about-eb-5-visa-classification).

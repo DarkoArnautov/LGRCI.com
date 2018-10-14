@@ -3,6 +3,7 @@ layout: page
 title: About Us
 sidebar_link: true
 weight: 1
+permalink: /about
 ---
 
 The Local Government Regional Center is composed of a team of investment professionals with decades of experience in both private markets and in government finance.

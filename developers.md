@@ -3,6 +3,7 @@ layout: page
 title: Developers
 sidebar_link: true
 weight: 4
+permalink: /developers
 ---
 
 ### The EB-5 program can be a powerful tool for funding both large- and small-scale projects and LGRC is eager to work with developers to find investment for suitable projects within the greater Chicagoland area.
