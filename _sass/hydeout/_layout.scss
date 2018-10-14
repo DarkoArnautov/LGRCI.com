@@ -31,10 +31,6 @@ body {
   padding: $section-spacing;
   min-height: 100vh;
   background-color: $sidebar-bg-color;
-  background-image: linear-gradient(
-    to bottom,
-    lighten($sidebar-bg-color, 7%),
-    darken($sidebar-bg-color, 7%));
 
   .site-title {
     font-family: "Abril Fatface", serif;
