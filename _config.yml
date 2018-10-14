@@ -4,8 +4,8 @@ highlighter:      rouge
 
 # Setup
 title:            LGRCI
-description:      'The <a href="http://hyde.getpoole.com" target="_blank">Hyde</a> theme for <a href="http://jekyllrb.com" target="_blank">Jekyll</a>, refreshed.'
-url:              https://fongandrew.github.io
+description:      'LGRCI'
+email:            inquiries@lgrci.com
 #baseurl:          ''
 baseurl:          'https://darkoarnautov.github.io/LGRCI.com'
                   # the optional subpath of your site, e.g. "/blog"
