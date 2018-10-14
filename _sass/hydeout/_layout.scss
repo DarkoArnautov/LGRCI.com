@@ -65,6 +65,78 @@ body {
     line-height: 33px;
     padding-bottom: 10px;
   }
+
+  li {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    padding-top: 20px;
+
+    .post-banner {
+      width: 30%;
+      padding-right: 10px;
+    }
+
+    .post-content {
+      width: 70%;
+      padding-left: 10px;
+
+      h4 {
+        text-transform: uppercase;
+        margin-top: 0px;
+      }
+    }
+  }
+
+  .contact-form {
+    width: 60%;
+
+    input {
+      width: 45%;
+      margin-right: 2%;
+      margin-bottom: 20px;
+      height: 34px;
+      padding: 0px 10px;
+      background: #FFF;
+      font-family: "DINNextLTPro-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      border: 1px solid #CCC;
+      border-radius: 0px;
+      font-size: 13px;
+      line-height: 34px;
+
+    }
+
+    textarea {
+      width: 93%;
+      background: #FFF;
+      font-family: "DINNextLTPro-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      border: 1px solid #CCC;
+      font-size: 13px;
+    }
+
+    select {
+      width: 69.5%;
+      margin-bottom: 20px;
+    }
+
+    button {
+      height: 38px;
+      margin: 20px 30px 0px 0px;
+      padding: 0px 30px;
+      border-radius: 0px;
+      background: #4b81d4;
+      border: 0px;
+      font-family: "DINNextLTPro-Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 38px;
+      color: #FFF;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+  }
+
+  .contact-info {
+    width: 40%;
+  }
 }
 
 
